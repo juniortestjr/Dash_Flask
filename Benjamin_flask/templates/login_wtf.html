@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>Login</h1>
+<form method="POST" action="/wtf">
+    {{ form_login.csrf_token }}
+    {{ form_login.utilisateur.label }} {{ form_login.utilisateur(size=20) }}<br>
+    <input type="submit" value="ok">
+</form>
+</body>
+</html>

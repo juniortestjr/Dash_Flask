@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1>Analyse du Nombre d'Occurerences du mot Paris</h1>
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name(size=20) }}<br>
+    {{ form.text.label }} <br>
+    {{ form.text(size=20) }}<br>
+    <input type="submit" value="Analyse">
+</form>
+{% if name %}
+    {% if occurrence %}
+    <h1>Voici vos Résultats :</h1>
+        Bonjour {{ name }}
+        <div class="page-header">
+            <h1>Paris a été trouvé {{ occurrence }} fois.</h1>
+        </div>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>
